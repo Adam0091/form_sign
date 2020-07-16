@@ -1,0 +1,93 @@
+
+
+.form{
+    position: relative;
+    width: 377px;
+    height: 558px;
+    background: #2D334D;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 3%;
+    color: white;
+}
+
+.form_name{
+    padding-top: 35px;
+    padding-bottom: 28px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+}
+
+.form_user_name{
+    text-align: center;
+}
+.form_user_phone_number{
+    text-align: center;
+}
+.form_user_email{
+    text-align: center;
+}
+.form_user_password{
+    text-align: center;
+}
+
+input{
+    color: white;
+    width: 275px;
+    height: 57px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    background: rgba(166, 169, 202,0.3);
+    border-radius: 3px; 
+    border: none;
+}
+
+input[type='checkbox']{
+    width: 16px;
+    height: 16px;
+
+}
+.form_button{
+    text-align: center;
+}
+
+.form_button button{
+    color: white;
+    background: #FF8A01;
+    border-color: #FF8A01;
+    border-radius: 3px;
+    max-height: 57px;
+    height: 57px;
+    width: 307px;
+}
+
+.form_checkbox_gender{
+    margin-left: 35px;
+    display: grid;
+    grid-template-columns: 118px 100px;
+    grid-template-areas: "man woman";
+}
+
+.form_checkbox_gender_man{
+    grid-area: man;
+}
+
+.form_checkbox_gender_woman{
+    grid-area: woman;
+}
+
+
+.form_link{
+    margin-top: 28px;
+    text-align: center;
+}
+.form_link a{
+    text-decoration: none; 
+}
+.form_link a span{
+    color: #8589AC;
+}

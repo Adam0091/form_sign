@@ -1,0 +1,25 @@
+body{
+  background: linear-gradient(64.57deg, #15172C 0%, #222543 51.56%, #242B47 100%);
+}
+
+.divAnimation{
+  animation-name: slideRight;
+  -webkit-animation-name: slideRight;
+
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;   
+
+  visibility: visible !important;
+}
+
+@keyframes slideRight {
+  0% {
+      transform: translateX(0%);
+  }      
+  100% {
+      transform: translateX(300%);
+  } 
+}
