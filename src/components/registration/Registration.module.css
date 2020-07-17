@@ -1,5 +1,3 @@
-
-
 .form{
     position: relative;
     width: 377px;
@@ -25,12 +23,15 @@
 .form_user_name{
     text-align: center;
 }
+
 .form_user_phone_number{
     text-align: center;
 }
+
 .form_user_email{
     text-align: center;
 }
+
 .form_user_password{
     text-align: center;
 }
@@ -51,6 +52,7 @@ input[type='checkbox']{
     height: 16px;
 
 }
+
 .form_button{
     text-align: center;
 }
@@ -85,9 +87,16 @@ input[type='checkbox']{
     margin-top: 28px;
     text-align: center;
 }
+
 .form_link a{
     text-decoration: none; 
 }
+
+.form_link a:active{
+    text-decoration: none; 
+    color:#43A9E7;
+}
+
 .form_link a span{
     color: #8589AC;
 }

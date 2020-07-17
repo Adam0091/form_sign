@@ -4,12 +4,14 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Registration from './components/registration/Registration';
 import SignUp from './components/SignUp/SignUp';
 
-function App() {
+function App(props) {
+
+  let page  =  <SignUp state = {props.state}/>
+
   return (
     <BrowserRouter>
       <div className = 'app_wrapper'>
-          <Route path='/reg' render={() => <Registration/>}/>
-          <Route path='/signup' render={() => <SignUp/>}/>
+          {page} 
       </div>
     </BrowserRouter>
   );

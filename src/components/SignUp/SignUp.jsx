@@ -1,17 +1,38 @@
 import React from 'react';
 import style from './SignUp.module.css';
 import { NavLink } from 'react-router-dom';
+import App from "./../../App";
+import ReactDOM from 'react-dom';
+import Registration from '../registration/Registration';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+
 
 const SignUp = (props) =>{
 
-    let slideRight = () =>{
-        window.location.pathname = '/reg';
+    let onclickLink = () => {
+        props.state.classNameAnimation = "divAnimationLeft";
+        ReactDOM.render(
+        <React.StrictMode>
+            <App state = {props.state}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+        );
+        setTimeout(() =>{
+            props.state.classNameAnimation = "divAnimationRight";
+            ReactDOM.render(
+                <React.StrictMode>
+                    <BrowserRouter>
+                        <Registration state = {props.state}/>
+                    </BrowserRouter>
+                </React.StrictMode>,
+                document.getElementById('root')
+            );
+        },250);
     }
 
-    let link = React.createRef();
-
     return (
-        <div>
+        <div className={props.state.classNameAnimation}>
             <div className={style.form}>
                 <div className={style.form_name}>Вход</div>
                 <div className={style.form_user_email}>
@@ -31,7 +52,7 @@ const SignUp = (props) =>{
                 </div>
             </div>
             <div className={style.form_link}>
-               <NavLink to='' ref={link} onClick={slideRight}><span>Зарегистрируйтесь</span> для полного спектра услуг</NavLink> 
+               <NavLink to='' onClick={onclickLink} ><span>Зарегистрируйтесь</span> для полного спектра услуг</NavLink> 
             </div>
         </div>
     );
